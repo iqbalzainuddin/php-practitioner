@@ -21,5 +21,22 @@
             </h1>
         </header>
 
+        <!-- 6-Array test code start here -->
+        <ul>
+            <!-- First option loop through array to print elements -->
+            <!-- <?php
+                // foreach ($names as $name) {
+                //     echo "<li>$name</li>";
+                // }
+            ?> -->
+            
+            <!-- Second option to loop through array to print elements -->
+            <!-- This option look cleaner -->
+            <?php foreach ($names as $name) : ?>
+                <li><?= $name; ?></li>
+            <?php endforeach ?>
+        </ul>
+        <!-- 6-Array test code end here -->
+
     </body>
 </html>
