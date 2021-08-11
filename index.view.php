@@ -15,11 +15,13 @@
     </head>
     <body>
         
+        <!-- 5-Separate logic from presentation code start here -->
         <header>
             <h1>
                 <?= $greeting; ?>
             </h1>
         </header>
+        <!-- 5-Separate logic from presentation code end here -->
 
         <!-- 6-Array test code start here -->
         <ul>
@@ -37,6 +39,14 @@
             <?php endforeach ?>
         </ul>
         <!-- 6-Array test code end here -->
+
+        <!-- 7-Associative array start here -->
+        <ul>
+            <?php foreach ($person as $feature => $val) : ?>
+                <li><strong><?= $feature ?>: </strong><?= $val; ?></li>
+            <?php endforeach ?>
+        </ul>
+        <!-- 7-Associative array end here -->
 
     </body>
 </html>
