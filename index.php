@@ -56,7 +56,7 @@
         'title' => 'Finish new feature',
         'due' => '1/1/2022',
         'assigned_to' => 'Syed',
-        'completed' => false,
+        'completed' => true,
     ];
     // 6-Boolean end here
 

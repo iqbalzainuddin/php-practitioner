@@ -83,6 +83,20 @@
                 </strong>
                 <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
             </li>
+
+            <!-- 9-Conditional start here -->
+            <li>
+                <strong>
+                    Status:
+                </strong>
+                <!-- Another different way to use conditional -->
+                <?php if ($task['completed']) :?>
+                    <span class="icon">&#9989;</span>
+                <?php else : ?>
+                    <?= 'Incomplete'; ?>
+                <?php endif ?>
+            </li>
+            <!-- 9-Conditional end here -->
         </ul>
         <!-- 8-Boolean end here -->
 
