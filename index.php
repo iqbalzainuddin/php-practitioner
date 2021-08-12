@@ -1,4 +1,6 @@
 <?php
+    // Included function.php file to use function declared in it
+    require 'functions.php';
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
     // Also can be uncommented to include header element in the page while display array elements
@@ -59,6 +61,10 @@
         'completed' => true,
     ];
     // 6-Boolean end here
+
+    // 10-function start here
+    echo isEligibleForClub(22) ? 'Come in' : 'Go away';
+    // 10-function end here
 
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
