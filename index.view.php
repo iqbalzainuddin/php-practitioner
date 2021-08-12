@@ -48,5 +48,43 @@
         </ul>
         <!-- 7-Associative array end here -->
 
+        <!-- 8-Boolean start here -->
+        <ul>
+            <!-- <?php // foreach ($task as $heading => $value) : ?>
+                <li>
+                    <strong> -->
+                        <!-- Using ucwords() function will capitalize each word first char -->
+                        <!-- <?= ucwords($heading); ?>:
+                    </strong>
+                    <?= $value; ?>
+                </li>
+            <?php // endforeach ?> -->
+            <li>
+                <strong>
+                    Title:
+                </strong>
+                <?= $task['title']; ?>
+            </li>
+            <li>
+                <strong>
+                    Due:
+                </strong>
+                <?= $task['due']; ?>
+            </li>
+            <li>
+                <strong>
+                    Personal Responsible:
+                </strong>
+                <?= $task['assigned_to']; ?>
+            </li>
+            <li>
+                <strong>
+                    Status:
+                </strong>
+                <?= $task['completed'] ? 'Complete' : 'Incomplete'; ?>
+            </li>
+        </ul>
+        <!-- 8-Boolean end here -->
+
     </body>
 </html>

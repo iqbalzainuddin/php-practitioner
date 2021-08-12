@@ -51,6 +51,15 @@
 
     // 7-Associative array end here
 
+    // 8-Boolean start here
+    $task = [
+        'title' => 'Finish new feature',
+        'due' => '1/1/2022',
+        'assigned_to' => 'Syed',
+        'completed' => false,
+    ];
+    // 6-Boolean end here
+
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
     // Uncomment this code below when you want to display array elements in index view page
