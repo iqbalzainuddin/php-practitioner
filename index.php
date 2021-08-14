@@ -1,6 +1,9 @@
 <?php
+    // 10-function start here
     // Included function.php file to use function declared in it
     require 'functions.php';
+    // 10-function end here
+
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
     // Also can be uncommented to include header element in the page while display array elements
@@ -65,6 +68,51 @@
     // 10-function start here
     echo isEligibleForClub(22) ? 'Come in' : 'Go away';
     // 10-function end here
+    
+    // 10-class 101 start here
+    // Class is representation of one thing or object
+    // Create class with Class ClassName {}
+    Class Task {
+        // Class will have description
+
+        // declare variable of properties
+        protected $description;
+        protected $completed = false;
+
+        // Function of constructor, __construct is a special keyword for declaring constructor
+        public function __construct($description) {
+            // Automatically triggered on instantiation
+
+            // $this-> to access properties current instance of class
+            $this->description = $description;
+        }
+
+        public function Completed() {
+            $this->completed = true;   
+        }
+
+        public function Description() {
+            return $this->description;
+        }
+
+        public function isCompleted() {
+            return $this->completed;
+        }
+    }
+
+    // Instantiation of class instance
+    $tasks = [
+        new Task('Cardio Exercise'),
+        new Task('Bodyweight Workout'),
+        new Task('Cold Shower')
+    ];
+
+    // Set first object to be completed to see the example of strikethrough of completed task in view page
+    $tasks[0]->Completed();
+    
+    // $task = new Task('Go to the store');
+    // dd($tasks);
+    // 10-class 101 end here
 
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
