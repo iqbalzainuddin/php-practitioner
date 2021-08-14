@@ -100,5 +100,23 @@
         </ul>
         <!-- 8-Boolean end here -->
 
+        <!-- 12- Class 101 start here -->
+        <ul>
+            <?php foreach ($tasks as $task) : ?>
+                <li>
+                    <?php if ($task->isCompleted()) : ?>
+                        <strike>
+                    <?php endif; ?>
+
+                    <?= $task->Description(); ?>
+
+                    <?php if ($task->isCompleted()) : ?>
+                        </strike>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach ?>
+        </ul>
+        <!-- 12- Class 101 end here -->
+
     </body>
 </html>
