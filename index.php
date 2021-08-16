@@ -115,8 +115,18 @@
     // 10-class 101 end here
 
     // 13-Intro to PDO start here
+    // 14-PDO refactor start here
+    // require 'database/Connection.php';
+    // require 'database/QueryBuilder.php';
+    require 'bootstrap.php';
+    // Can also be assigned to variable - $query = require 'bootstrap.php'; - bootstrap must return QueryBuilder instance
     require 'Task.php';
-    require 'functions.php';
+    // require 'functions.php';
+
+    // $pdo = Connection::make();
+    // $query = new QueryBuilder($pdo);
+    $tasks = $query->selectAll('todos', 'Task');
+    // 14-PDO refactor end here
 
     // $PDO = ConnectToDB();
     // $statement = $PDO->prepare('select * from todos');
@@ -124,7 +134,8 @@
     // $tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 
     // All process of connecting to db and retrieving the data abstracted by the function fetchAllTasks()
-    $tasks = fetchAllTasks();
+    // Belong to #13
+    // $tasks = fetchAllTasks($pdo);
 
     // var_dump($tasks[0]->description);
     // 13-Intro to PDO end here
