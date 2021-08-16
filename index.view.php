@@ -122,15 +122,15 @@
         <ul>
             <?php foreach ($tasks as $task) : ?>
                 <li>
-                    <!-- <?php// if ($task->isCompleted()) : ?>
+                    <?php if ($task->isCompleted()) : ?>
                         <strike>
-                    <?php// endif; ?> -->
+                    <?php endif; ?>
 
                     <?= $task->Description(); ?>
 
-                    <!-- <?php //if ($task->isCompleted()) : ?>
+                    <?php if ($task->isCompleted()) : ?>
                         </strike>
-                    <?php// endif; ?> -->
+                    <?php endif; ?>
                 </li>
             <?php endforeach ?>
         </ul>
