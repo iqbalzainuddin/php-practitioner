@@ -1,25 +1,25 @@
 <?php
     // 10-function start here
     // Included function.php file to use function declared in it
-    require 'functions.php';
+    // require 'functions.php';
     // 10-function end here
 
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
     // Also can be uncommented to include header element in the page while display array elements
-    $greeting = "Hello, World!";
+    // $greeting = "Hello, World!";
     // 5-Separate logic from presentation code end here
     
     // 6-Array test code start here
     // This is how to create array variable
-    $names = [
-        'Jeff',
-        'Anna',
-        'Amy'
-    ];
+    // $names = [
+    //     'Jeff',
+    //     'Anna',
+    //     'Amy'
+    // ];
 
     // Add value to array
-    $names[] = 'Kendrick';
+    // $names[] = 'Kendrick';
 
     // Filter through array
     // foreach ($names as $name) {
@@ -29,17 +29,17 @@
 
     // 7-Associative array start here
     // Create array that have key at value assigned to it
-    $person = [
-        'age' => 22,
-        'hair' => 'brown',
-        'career' => 'Web Developer'
-    ];
+    // $person = [
+    //     'age' => 22,
+    //     'hair' => 'brown',
+    //     'career' => 'Web Developer'
+    // ];
 
     // Push new key and value to the array
-    $person['name'] = 'Hadid';
+    // $person['name'] = 'Hadid';
 
     // use unset() to remove key and value pair from an array
-    unset($person['age']);
+    // unset($person['age']);
 
     // echo can print string, but cannot print array
     // use var_dump() instead
@@ -57,62 +57,77 @@
     // 7-Associative array end here
 
     // 8-Boolean start here
-    $task = [
-        'title' => 'Finish new feature',
-        'due' => '1/1/2022',
-        'assigned_to' => 'Syed',
-        'completed' => true,
-    ];
+    // $task = [
+    //     'title' => 'Finish new feature',
+    //     'due' => '1/1/2022',
+    //     'assigned_to' => 'Syed',
+    //     'completed' => true,
+    // ];
     // 6-Boolean end here
 
     // 10-function start here
-    echo isEligibleForClub(22) ? 'Come in' : 'Go away';
+    // echo isEligibleForClub(22) ? 'Come in' : 'Go away';
     // 10-function end here
     
     // 10-class 101 start here
     // Class is representation of one thing or object
     // Create class with Class ClassName {}
-    Class Task {
-        // Class will have description
+    // Class Task {
+    //     // Class will have description
 
-        // declare variable of properties
-        protected $description;
-        protected $completed = false;
+    //     // declare variable of properties
+    //     protected $description;
+    //     protected $completed = false;
 
-        // Function of constructor, __construct is a special keyword for declaring constructor
-        public function __construct($description) {
-            // Automatically triggered on instantiation
+    //     // Function of constructor, __construct is a special keyword for declaring constructor
+    //     public function __construct($description) {
+    //         // Automatically triggered on instantiation
 
-            // $this-> to access properties current instance of class
-            $this->description = $description;
-        }
+    //         // $this-> to access properties current instance of class
+    //         $this->description = $description;
+    //     }
 
-        public function Completed() {
-            $this->completed = true;   
-        }
+    //     public function Completed() {
+    //         $this->completed = true;   
+    //     }
 
-        public function Description() {
-            return $this->description;
-        }
+    //     public function Description() {
+    //         return $this->description;
+    //     }
 
-        public function isCompleted() {
-            return $this->completed;
-        }
-    }
+    //     public function isCompleted() {
+    //         return $this->completed;
+    //     }
+    // }
 
     // Instantiation of class instance
-    $tasks = [
-        new Task('Cardio Exercise'),
-        new Task('Bodyweight Workout'),
-        new Task('Cold Shower')
-    ];
+    // $tasks = [
+    //     new Task('Cardio Exercise'),
+    //     new Task('Bodyweight Workout'),
+    //     new Task('Cold Shower')
+    // ];
 
     // Set first object to be completed to see the example of strikethrough of completed task in view page
-    $tasks[0]->Completed();
+    // $tasks[0]->Completed();
     
     // $task = new Task('Go to the store');
     // dd($tasks);
     // 10-class 101 end here
+
+    // 13-Intro to PDO start here
+    require 'Task.php';
+    require 'functions.php';
+
+    // $PDO = ConnectToDB();
+    // $statement = $PDO->prepare('select * from todos');
+    // $statement->execute();
+    // $tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+
+    // All process of connecting to db and retrieving the data abstracted by the function fetchAllTasks()
+    $tasks = fetchAllTasks();
+
+    // var_dump($tasks[0]->description);
+    // 13-Intro to PDO end here
 
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
