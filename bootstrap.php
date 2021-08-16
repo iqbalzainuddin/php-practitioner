@@ -4,7 +4,10 @@
     require 'database/Connection.php';
     require 'database/QueryBuilder.php';
 
-    $pdo = Connection::make();
+    // 15-hidepw
+    $config = require 'config.php';
+
+    $pdo = Connection::make($config['database']);
     $query = new QueryBuilder($pdo);
 
     // If want to assign this bootstrap to variable, return the QueryBuilder instance
