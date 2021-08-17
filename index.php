@@ -118,14 +118,14 @@
     // 14-PDO refactor start here
     // require 'database/Connection.php';
     // require 'database/QueryBuilder.php';
-    require 'bootstrap.php';
+    // require 'bootstrap.php';
     // Can also be assigned to variable - $query = require 'bootstrap.php'; - bootstrap must return QueryBuilder instance
-    require 'Task.php';
+    // require 'Task.php';
     // require 'functions.php';
 
     // $pdo = Connection::make();
     // $query = new QueryBuilder($pdo);
-    $tasks = $query->selectAll('todos', 'Task');
+    // $tasks = $query->selectAll('todos', 'Task');
     // 14-PDO refactor end here
 
     // $PDO = ConnectToDB();
@@ -143,5 +143,19 @@
     // 5-Separate logic from presentation code start here
     // Comment code below to test array test code
     // Uncomment this code below when you want to display array elements in index view page
-    require 'index.view.php';
+    // require 'index.view.php';
     // 5-Separate logic from presentation code end here
+    
+    // Start from topic 16-router
+    require 'core/bootstrap.php';
+
+    $routes = new Router;
+
+    require 'routes.php';
+
+    // var_dump(trim($_SERVER['REQUEST_URI'], '/'));
+    // $uri = trim($_SERVER['REQUEST_URI'], '/');
+    // die(var_dump($routes->direct('about')));
+    // require $routes->direct($uri);
+
+    require Router::load('routes.php')->direct(Request::uri());

@@ -1,6 +1,8 @@
 <?php
     // Created during 14-PDO refactor
 
+    require 'Task.php';
+
     class QueryBuilder {
         
         protected $pdo;
