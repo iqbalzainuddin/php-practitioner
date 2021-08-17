@@ -1,4 +1,5 @@
 <?php
+    // Created during 15-Hide config
 
     return [
         'database' => [
