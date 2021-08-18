@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-            header {
-                background: #E3E3E3;
-                padding: 2em;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        
+<?php require('partials/head.view.php'); ?>        
         <!-- 5-Separate logic from presentation code start here -->
         <!-- <header>
             <h1>
@@ -120,14 +104,16 @@
 
         <!-- 13-Intro to PDO start here -->
         <!-- Added during 16-make a router -->
-        <nav>
+        <!-- <nav>
             <ul>
                 <li><a href="/">Home Page</a></li>
                 <li><a href="/about/">About Page</a></li>
+                <li><a href="/about/">About Culture Page</a></li>
                 <li><a href="/contact/">Contact Page</a></li>
             </ul>
-        </nav>
+        </nav> -->
 
+        <!-- <?php // require('partials/nav.view.php'); ?> -->
 
         <h1>My Tasks</h1>
         
@@ -148,5 +134,4 @@
         </ul>
         <!-- 13-Intro to PDO end here -->
 
-    </body>
-</html>
+<?php require('partials/foot.view.php'); ?>
